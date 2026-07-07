@@ -18,7 +18,7 @@ public class Student{
         this.studentName = studentName;
     }
 
-    public String getstudentName(){
+    public String getStudentName(){
         return this.studentName;
     }
 

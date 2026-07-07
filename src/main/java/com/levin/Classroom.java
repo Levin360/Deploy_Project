@@ -42,4 +42,22 @@ public class Classroom {
     public List<Student> getStudentList(){
         return this.studentList;
     }
+
+    public void viewSection(){
+        System.out.println("Section Name: " + sectionName);
+        System.out.println("Section's Advisor: " + nameOfAdvisor);
+        System.out.println("Number of Students: " + numberOfStudents);
+
+        System.out.println("---  Student List ---");
+
+        for (int i = 0; i < studentList.size(); i++){
+            Student student = studentList.get(i);
+
+            System.out.println("ID: " + student.getStudentId());
+            System.out.println("Student Name: " + student.getStudentName());
+            System.out.println("Student Age: " + student.getStudentAge());
+            System.out.println("---------------------");
+
+        }
+    }
 }

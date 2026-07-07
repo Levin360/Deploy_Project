@@ -12,35 +12,46 @@ public class Main {
         int option = scanner.nextInt();
 
         if (option == 1){
+
+            Classroom classroom = new Classroom();
+
             System.out.println("Enter Section Name: ");
             String sectionName = scanner.next();
-            System.out.println("Section name: " + sectionName);
+//            System.out.println("Section name: " + sectionName);
+            classroom.setSectionName(sectionName);
 
             System.out.println("Enter number of Student: ");
             int numberOfStudents = scanner.nextInt();
-            System.out.println("Number of Student: " + numberOfStudents);
+//            System.out.println("Number of Student: " + numberOfStudents);
+            classroom.setNumberOfStudents(numberOfStudents);
 
             System.out.println("Enter Advisor's Name: ");
             String nameOfAdvisor = scanner.next();
-            System.out.println("Advisor's name: " + nameOfAdvisor);
+//            System.out.println("Advisor's name: " + nameOfAdvisor);
+            classroom.setNameofAdvisor(nameOfAdvisor);
 
             for(int x = 0; x < numberOfStudents; x++){
                 Student student = new Student();
 
                 System.out.println("Enter Student's Id: ");
                 int studentId = scanner.nextInt();
-                System.out.println("Student's Id: " + studentId);
+//                System.out.println("Student's Id: " + studentId);
+                student.setStudentId(studentId);
 
                 System.out.println("Enter Student's Name: ");
                 String studentName = scanner.next();
-                System.out.println("Student's Name: " + studentName);
+//                System.out.println("Student's Name: " + studentName);
+                student.setStudentName(studentName);
 
                 System.out.println("Enter Student's Age: ");
                 int studentAge = scanner.nextInt();
-                System.out.println("Student's Age: " + studentAge);
+//                System.out.println("Student's Age: " + studentAge);
+                student.setStudentAge(studentAge);
+
+                classroom.getStudentList().add(student);
             }
-
-
+            System.out.println();
+            classroom.viewSection();
 
         }
 
